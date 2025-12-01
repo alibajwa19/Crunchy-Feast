@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkout</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f8f8f8;
+            padding: 20px;
+        }
+        .checkout-box {
+            width: 400px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background: orange;
+            color: white;
+            border: none;
+            margin-top: 15px;
+            cursor: pointer;
+            border-radius: 8px;
+            font-size: 18px;
+        }
+        #ss-upload {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="checkout-box">
+    <h2>Checkout</h2>
+
+    <label>Customer Name</label>
+    <input type="text" id="cust-name" placeholder="Enter your name">
+
+    <label>Phone Number</label>
+    <input type="text" id="cust-phone" placeholder="03XX XXXXXXX">
+
+    <label>Address</label>
+    <input type="text" id="cust-address" placeholder="Enter delivery address">
+
+    <label>Payment Method</label>
+    <select id="payment" onchange="toggleSS()">
+        <option value="cod">Cash on Delivery</option>
+        <option value="online">Online Payment (Easypaisa/JazzCash/Card)</option>
+    </select>
+
+    <div id="ss-upload">
+        <label>Upload Payment Screenshot</label>
+        <input type="file" id="ss-file">
+    </div>
+
+    <h3>Total: Rs <span id="total-final"></span></h3>
+
+    <button onclick="placeOrder()">Place Order</button>
+</div>
+
+<script src="checkout.js"></script>
+</body>
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crunchy Feast - Home</title>
+
+    <style>
+        /* General Styles*/
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar / Taskbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ff4b2b;
+            padding: 10px 20px;
+            color: white;
+            position: sticky;
+            top: 0;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .location-dropdown select {
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .navbar button {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: white;
+            color: #ff4b2b;
+            font-weight: bold;
+        }
+
+        /* Hero Section*/
+        .hero {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+        .hero img {
+            width: 100%;
+            opacity: 0.5;
+        }
+
+        .hero .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .location-box {
+            background-color: #007bff;
+            padding: 10px 20px;
+            border-radius: 25px;
+            margin-bottom: 15px;
+            display: inline-block;
+            font-weight: bold;
+        }
+
+        .tagline {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px #000;
+        }
+
+        .menu-button {
+            background-color: #ff9500;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+        }
+
+        /* Why Choose Section*/
+        .why-choose {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .why-choose h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .why-choose p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .specialties {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .specialty {
+            background-color: #fff;
+            width: 180px;
+            height: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            font-weight: bold;
+            color: #ff4b2b;
+        }
+
+        /* Achievements Section*/
+        .achievements {
+            background-color: #28a745;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .achievement-box {
+            font-weight: bold;
+            font-size: 18px;
+            background-color: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            min-width: 150px;
+        }
+
+        /* Call to Action Section*/
+        .cta {
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .cta a {
+            display: inline-block;
+            padding: 20px 40px;
+            background-color: #ff4b2b;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .cta a:hover {
+            background-color: #ff9500;
+        }
+
+        /* Hamburger is hidden on large screens */
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Hide the overflow navbar on phone */
+@media (max-width: 768px) {
+
+    .nav-content {
+        display: none;
+        flex-direction: column;
+        background-color: #ff4b2b;
+        width: 100%;
+        padding: 15px 0;
+        text-align: center;
+    }
+
+    .nav-content a,
+    .nav-content button,
+    .location-dropdown,
+    .group-names {
+        margin: 10px 0;
+        display: block;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    /* When active show menu */
+    .nav-content.active {
+        display: flex;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Navbar / Taskbar-->
+  <div class="navbar">
+    <div class="logo">Crunchy Feast</div>
+
+    <!-- Hamburger icon -->
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+    <!-- Navigation Links -->
+    <div class="nav-content" id="navContent">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+
+        <span class="location-dropdown">
+            <select>
+                <option selected>Choose Your Location</option>
+                <option>GT Road, Sahiwal</option>
+                <option>Mandhali Road, Sahiwal</option>
+                <option>Jail Road, Sargodha</option>
+                <option>University Road, Sargodha</option>
+            </select>
+        </span>
+
+        <span class="group-names">Umer Hameed , Ali Hassan & Ehsan Danish</span>
+
+        <a href="login.html">
+            <button>Sign In / Login</button>
+        </a>
+    </div>
+</div>
+
+
+    <!-- Hero Section-->
+    <div class="hero">
+        <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1350&q=80" alt="Dishes">
+        <div class="content">
+            <div class="location-box">Sargodha & Sahiwal</div>
+            <div class="tagline">Satisfy Your Cravings with Delicious Food!</div>
+            <a href="menu.html" class="menu-button">Menu</a>
+        </div>
+    </div>
+
+    <!--  Why Choose Section-->
+    <div class="why-choose">
+        <h2>Why Choose Our Restaurant?</h2>
+        <p>We make food ordering fast, easy, and delicious!</p>
+        <div class="specialties">
+            <div class="specialty">Fast Delivery</div>
+            <div class="specialty">Easy Ordering</div>
+            <div class="specialty">Wide Selection</div>
+            <div class="specialty">Fresh Ingredients</div>
+        </div>
+    </div>
+
+    <!--  Achievements Section-->
+    <div class="achievements">
+        <div class="achievement-box">5000+ Happy Customers</div>
+        <div class="achievement-box">50+ Partner Restaurants</div>
+        <div class="achievement-box">24/7 Customer Support</div>
+        <div class="achievement-box">1000+ Daily Orders</div>
+    </div>
+
+    <!--  Call to Action Section-->
+    <div class="cta">
+        <a href="menu.html">Let's Start Ordering</a>
+    </div>
+
+    <script>
+function toggleMenu() {
+    document.getElementById("navContent").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crunchy Feast – Menu</title>
+    <link rel="stylesheet" href="menu.css" />
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Crunchy Feast</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a class="active" href="menu.html">Menu</a>
+            <a href="cart.html">Cart</a>
+
+
+        </div>
+    </nav>
+
+    <!-- Menu Title -->
+    <header class="page-header">
+        <h1>Our Delicious Menu</h1>
+        <p>Choose from our wide selection of freshly prepared meals.</p>
+    </header>
+
+    <!-- BURGER Section -->
+    <section class="menu-section">
+        <h2 class="section-title">Burgers</h2>
+        <div class="menu-grid">
+
+            <div class="menu-card">
+                <img src="Zinger.jpeg" alt="Zinger Burger" />
+                <h3>Zinger Burger</h3>
+                <p class="price">Rs. 500</p>
+                <input type="number" min="1" value="1" />
+                <div class="card-buttons">
+    <button class="add-btn" onclick="addToCart('Zinger Burger', 500, this)">Add</button>
+    <button class="buy-btn" onclick="buyNow('Zinger Burger', 500, this)">Buy</button> 
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="Beef.jpeg" alt="Beef Burger" />
+                <h3>Beef Burger</h3>
+                <p class="price">Rs. 900</p>
+                <input type="number" min="1" value="1" />
+                <div class="card-buttons">
+    <button class="add-btn" onclick="addToCart('Beef Burger', 900, this)">Add</button>
+    <button class="buy-btn" onclick="buyNow('Beef Burger', 900, this)">Buy</button>
+
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="Tower.jpeg" alt="Tower Burger" />
+                <h3>Tower Burger</h3>
+                <p class="price">Rs. 800</p>
+                <input type="number" min="1" value="1" />
+                <div class="card-buttons">
+    <button class="add-btn" onclick="addToCart('Tower Burger', 800, this)">Add</button>
+    <button class="buy-btn" onclick="buyNow('Tower Burger', 800, this)">Buy</button>
+
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="Mighty.jpeg" alt="Mighty Burger" />
+                <h3>Mighty Burger</h3>
+                <p class="price">Rs. 770</p>
+                <input type="number" min="1" value="1" />
+                <div class="card-buttons">
+    <button class="add-btn" onclick="addToCart('Mighty Burger', 770, this)">Add</button>
+    <button class="buy-btn" onclick="buyNow('Mighty Burger', 770, this)">Buy</button>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Pizza Section -->
+    <section class="menu-section">
+        <h2 class="section-title">Pizza</h2>
+        <div class="menu-grid">
+
+            <div class="menu-card">
+                <img src="Tikka.jpeg" alt="Chicken Tikka" />
+                <h3>Chicken Tikka</h3>
+                <p class="price">Rs. 1200</p>
+                <input type="number" min="1" value="1" />
+                <div class="card-buttons">
+    <button class="add-btn" onclick="addToCart('Chicken Tikka Pizza', 1200, this)">Add</button>
+    <button class="buy-btn" onclick="buyNow('Chicken Tikka Pizza', 1200, this)">Buy</button>
+
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="Fajita.jpeg" alt="Fajita Pizza" />
+                <h3>Fajita</h3>
+                <p class="price">Rs. 1250</p>
+                <input type="number" min="1" value="1" />
+                <div class="card-buttons">
+    <button class="add-btn" onclick="addToCart('Fajita Pizza', 1250, this)">Add</button>
+    <button class="buy-btn" onclick="buyNow('Fajita Pizza', 1250, this)">Buy</button>
+
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="Special.jpeg" alt="Special Pizza" />
+                <h3>Special</h3>
+                <p class="price">Rs. 1600</p>
+                <input type="number" min="1" value="1" />
+                <div class="card-buttons">
+    <button class="add-btn" onclick="addToCart('Special Pizza', 1600, this)">Add</button>
+    <button class="buy-btn" onclick="buyNow('Special Pizza', 1600, this)">Buy</button>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="Crown Crust.jpeg" alt="Crown Crust" />
+                <h3>Crown Crust</h3>
+                <p class="price">Rs. 1800</p>
+                <input type="number" min="1" value="1" />
+                <div class="card-buttons">
+    <button class="add-btn" onclick="addToCart('Crown Crust Pizza', 1800, this)">Add</button>
+    <button class="buy-btn" onclick="buyNow('Crown Crust Pizza', 1800, this)">Buy</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Snacks Section -->
+    <section class="menu-section">
+        <h2 class="section-title">Snacks & Pasta</h2>
+        <div class="menu-grid">
+
+            <div class="menu-card">
+                <img src="pasta.jpeg" alt="Pasta" />
+                <h3>Pasta</h3>
+                <p class="price">Rs. 550</p>
+                <input type="number" min="1" value="1" />
+                <div class="card-buttons">
+    <button class="add-btn" onclick="addToCart('Pasta', 550, this)">Add</button>
+    <button class="buy-btn" onclick="buyNow('Pasta', 550, this)">Buy</button>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="wings.jpeg" alt="Wings" />
+                <h3>Wings</h3>
+                <p class="price">Rs. 400</p>
+                <input type="number" min="1" value="1" />
+                <div class="card-buttons">
+    <button class="add-btn" onclick="addToCart('Wings', 400, this)">Add</button>
+    <button class="buy-btn" onclick="buyNow('Wings', 400, this)">Buy</button>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="fries.jpeg" alt="Fries" />
+                <h3>Fries</h3>
+                <p class="price">Rs. 350</p>
+                <input type="number" min="1" value="1" />
+                <div class="card-buttons">
+    <button class="add-btn" onclick="addToCart('Fries', 350, this)">Add</button>
+    <button class="buy-btn" onclick="buyNow('Fries', 350, this)">Buy</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Cold drinks -->
+    <section class="menu-section">
+        <h2 class="section-title">Cold Drinks</h2>
+        <div class="menu-grid">
+
+            <div class="menu-card">
+                <img src="drinks.jpeg" alt="Coke" />
+                <h3>Coke</h3>
+                <p class="price">Rs. 190</p>
+                <input type="number" min="1" value="1" />
+                <div class="card-buttons">
+    <button class="add-btn" onclick="addToCart('Coke', 190, this)">Add</button>
+    <button class="buy-btn" onclick="buyNow('Coke', 190, this)">Buy</button>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="drinks.jpeg" alt="Pepsi" />
+                <h3>Pepsi</h3>
+                <p class="price">Rs. 170</p>
+                <input type="number" class="qty" value="1" min="1" />
+                <div class="card-buttons">
+    <button class="add-btn" onclick="addToCart('Pepsi', 170, this)">Add</button>
+    <button class="buy-btn" onclick="buyNow('Pepsi', 170, this)">Buy</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+       <!-- add to cart -->
+<script>
+    function addToCart(name, price, btn) {
+
+        // Get the nearest quantity input inside the same card
+        let qtyInput = btn.closest(".menu-card").querySelector("input[type='number']");
+        let qty = parseInt(qtyInput.value);
+
+        if (!qty || qty < 1) {
+            alert("Please enter a valid quantity!");
+            return;
+        }
+
+        // Save to localStorage
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        cart.push({
+            name: name,
+            price: price,
+            qty: qty
+        });
+
+        localStorage.setItem("cart", JSON.stringify(cart));
+        alert(name + " added to cart!");
+    }
+
+    function buyNow(name, price, btn) {
+        addToCart(name, price, btn);
+        window.location.href = "cart.html";
+    }
+</script>
+
+</body>
+</html>
+
